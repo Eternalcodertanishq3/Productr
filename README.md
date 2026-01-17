@@ -110,9 +110,9 @@ graph TD
     UserAPI -->|Updates Profile| UsersDB
     
     %% Styling
-    style Client fill:#eef2ff,stroke:#6366f1
-    style Server fill:#f0fdf4,stroke:#22c55e
-    style Database fill:#fff7ed,stroke:#f97316
+    style Client fill:#e0e7ff,stroke:#6366f1,stroke-width:2px
+    style Server fill:#dcfce7,stroke:#22c55e,stroke-width:2px
+    style Database fill:#ffedd5,stroke:#f97316,stroke-width:2px
 ```
 
 ## ✨ Features Implemented
