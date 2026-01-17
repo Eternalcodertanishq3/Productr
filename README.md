@@ -82,7 +82,7 @@ graph TD
         AuthAPI[Auth Routes]
         ProductAPI[Product Routes]
         UserAPI[User Routes]
-        Middleware[🛡️ Security (Helmet/RateLimit)]
+        Middleware["🛡️ Security (Helmet/RateLimit)"]
     end
 
     subgraph Database ["💾 Database (MongoDB)"]
