@@ -110,10 +110,26 @@ graph TD
     UserAPI -->|Updates Profile| UsersDB
     
     %% Styling
-    style Client fill:#e0e7ff,stroke:#6366f1,stroke-width:2px
-    style Server fill:#dcfce7,stroke:#22c55e,stroke-width:2px
-    style Database fill:#ffedd5,stroke:#f97316,stroke-width:2px
+    style Client fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff
+    style Server fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#fff
+    style Database fill:#451a03,stroke:#fb923c,stroke-width:2px,color:#fff
 ```
+
+### 🔄 Workflow Explained
+
+1.  **Authentication Layer (Secure Access)**:
+    *   User requests an OTP via the **Login Page**.
+    *   **React** sends a `POST` request to the **Node.js Server**.
+    *   Server validates the user in **MongoDB**, generating a secure token.
+
+2.  **Data & Analytics Flow**:
+    *   Upon login, the **Dashboard** requests product data.
+    *   **Axios Interceptor** automatically attaches the auth token to every request.
+    *   Server's **Middleware** verifies the token and checks **Rate Limits**.
+    *   **Product Routes** fetch live data/aggregations from MongoDB and return JSON to the UI.
+
+3.  **Visualization**:
+    *   The **Analytics UI** takes raw JSON data and processes it into **Recharts** (Area/Bar/Pie) for visual business intelligence.
 
 ## ✨ Features Implemented
 
