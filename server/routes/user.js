@@ -30,6 +30,9 @@ router.put('/:id', async (req, res) => {
         res.json(user);
     } catch (err) {
         console.error(err);
+        if (err.code === 11000) {
+            return res.status(400).json({ message: 'That email is already associated with another account.' });
+        }
         res.status(500).json({ message: 'Server Error', error: err.message });
     }
 });
