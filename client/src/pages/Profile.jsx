@@ -89,7 +89,8 @@ const Profile = () => {
             setToast({ message: 'Profile updated successfully!', type: 'success' });
         } catch (error) {
             console.error(error);
-            setToast({ message: 'Failed to update profile', type: 'error' });
+            const errorMessage = error.response?.data?.error || error.response?.data?.message || 'Failed to update profile';
+            setToast({ message: errorMessage, type: 'error' });
         }
     };
 
