@@ -1,5 +1,11 @@
 # Productr - Full Stack Web Application
 
+> **🚀 LIVE DEMO**: [https://productr-monorepo.vercel.app](https://productr-monorepo.vercel.app)
+>
+> 🧪 **Tester Credentials**:
+> *   **Email**: `admin@productr.com` (or any valid email)
+> *   **OTP**: `123456`
+
 A pixel-perfect, fully responsive e-commerce dashboard application built with the MERN stack (MongoDB, Express, React, Node.js). This project replicates the provided Figma design with a focus on UI accuracy, scalability, and performance.
 
 ## 📂 Folder Structure
@@ -181,4 +187,3 @@ To demonstrate **Senior-Level Engineering Capabilities** and production-readines
 -   **Frontend**: React.js, Tailwind CSS, Phosphor Icons, Axios.
 -   **Backend**: Node.js, Express.js.
 -   **Database**: MongoDB.
-
