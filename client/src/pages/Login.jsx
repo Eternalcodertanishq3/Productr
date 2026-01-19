@@ -16,7 +16,14 @@ const Login = () => {
         setLoading(true);
         try {
             await api.post('/auth/send-otp', { email });
-            navigate('/otp', { state: { email } });
+            // navigate('/otp', { state: { email } });
+            // Show OTP for Recruiter/Demo purpose
+            setToast({ message: 'OTP Sent! Use 123456 for testing.', type: 'success' });
+
+            // Navigate after small delay so they see the toast
+            setTimeout(() => {
+                navigate('/otp', { state: { email } });
+            }, 2000);
         } catch (error) {
             console.error(error);
             setToast({ message: 'Failed to send OTP. Please try again.', type: 'error' });
